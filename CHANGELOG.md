@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.1
+- Logo in Nav und Footer grösser (h-14 statt h-10)
+- Nav höher (h-20) mit "Confiserie Bachmann · LUZERN · SEIT 1897" neben Logo
+- Footer-Logo ebenfalls vergrössert
+
 ## v1.2.0
 - Kontakt auf Leadhunter (Irma Eckermann) umgestellt statt Confiserie Bachmann direkt
 - Footer: Name, E-Mail, Telefon, Adresse von Leadhunter

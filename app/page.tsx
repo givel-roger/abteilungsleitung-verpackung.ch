@@ -150,9 +150,13 @@ export default function Home() {
 
       {/* ── NAV ── */}
       <nav className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
-          <a href="#" className="flex items-center">
-            <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={110} height={55} className="h-10 w-auto" priority />
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-20 flex items-center justify-between">
+          <a href="#" className="flex items-center gap-4">
+            <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={140} height={70} className="h-14 w-auto" priority />
+            <div className="hidden sm:block border-l border-border pl-4">
+              <span className="font-display text-lg text-primary leading-tight block">Confiserie Bachmann</span>
+              <span className="text-xs text-muted tracking-widest uppercase">Luzern · Seit 1897</span>
+            </div>
           </a>
           <a href="#bewerbung" onClick={(e) => { e.preventDefault(); scrollToForm(); }} className="bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-colors">
             Jetzt bewerben
@@ -161,7 +165,7 @@ export default function Home() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="relative bg-gradient-to-b from-primary to-primary-light pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-primary to-primary-light pt-32 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10">
           <div className="grid lg:grid-cols-[1fr_380px] gap-12 items-start">
             <div>
@@ -625,7 +629,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10">
           <div className="grid sm:grid-cols-3 gap-10 mb-10">
             <div>
-              <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={110} height={55} className="h-10 w-auto mb-4 brightness-0 invert" />
+              <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={140} height={70} className="h-14 w-auto mb-4 brightness-0 invert" />
               <p className="text-white/50 text-sm leading-relaxed">
                 Seit 1897 in Luzern — Confiserie, Bäckerei und mehr.
                 Mit über 30 Filialen und einem familiären Team.
@@ -652,7 +656,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
-            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.2.0</span></p>
+            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.2.1</span></p>
             <div className="flex gap-6">
               <a href="/impressum" className="hover:text-white/60 transition-colors">Impressum</a>
               <a href="/datenschutz" className="hover:text-white/60 transition-colors">Datenschutz</a>
