@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 function useInView() {
   const ref = useRef<HTMLDivElement>(null);
@@ -87,15 +88,8 @@ export default function Home() {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
-  const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const formRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (menuOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
 
   function scrollToForm() {
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -155,12 +149,12 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
 
       {/* ── NAV ── */}
-      <nav className="fixed top-0 inset-x-0 z-50 bg-primary/95 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
-          <a href="#" className="text-white font-semibold text-lg tracking-wide">
-            Confiserie Bachmann
+          <a href="#" className="flex items-center">
+            <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={110} height={55} className="h-10 w-auto" priority />
           </a>
-          <a href="#bewerbung" onClick={(e) => { e.preventDefault(); scrollToForm(); }} className="bg-accent hover:bg-accent-hover text-primary font-semibold px-6 py-2.5 text-sm rounded-full transition-colors">
+          <a href="#bewerbung" onClick={(e) => { e.preventDefault(); scrollToForm(); }} className="bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-colors">
             Jetzt bewerben
           </a>
         </div>
@@ -188,7 +182,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                <button onClick={scrollToForm} className="bg-accent hover:bg-accent-hover text-primary font-semibold px-8 py-4 rounded-full text-base transition-colors cursor-pointer">
+                <button onClick={scrollToForm} className="bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-full text-base transition-colors cursor-pointer">
                   In 60 Sekunden bewerben →
                 </button>
                 <a href="#rolle" className="border border-white/30 hover:border-white/60 text-white px-6 py-4 rounded-full text-base transition-colors">
@@ -255,10 +249,10 @@ export default function Home() {
       </section>
 
       {/* ── DEINE ROLLE ── */}
-      <section id="rolle" className="py-20 sm:py-28">
+      <section id="rolle" className="py-20 sm:py-28 bg-warm">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10">
           <FadeIn>
-            <p className="inline-block bg-surface border border-border text-foreground text-xs font-semibold tracking-[0.15em] uppercase px-4 py-2 rounded-full mb-6">Deine Rolle</p>
+            <p className="inline-block bg-white border border-border text-foreground text-xs font-semibold tracking-[0.15em] uppercase px-4 py-2 rounded-full mb-6">Deine Rolle</p>
             <h2 className="font-display text-4xl sm:text-5xl text-foreground mb-4 leading-tight">
               Vom Allrounder zur<br />stellvertretenden Führung.
             </h2>
@@ -554,7 +548,7 @@ export default function Home() {
                   <button
                     onClick={nextStep}
                     disabled={!canNext[step]()}
-                    className="flex-1 bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-primary font-semibold py-3.5 rounded-full text-sm transition-colors cursor-pointer"
+                    className="flex-1 bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-full text-sm transition-colors cursor-pointer"
                   >
                     Weiter
                   </button>
@@ -562,7 +556,7 @@ export default function Home() {
                   <button
                     onClick={handleSubmit}
                     disabled={!canNext[3]() || sending}
-                    className="flex-1 bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-primary font-semibold py-3.5 rounded-full text-sm transition-colors cursor-pointer"
+                    className="flex-1 bg-accent hover:bg-accent-hover disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-full text-sm transition-colors cursor-pointer"
                   >
                     {sending ? "Wird gesendet..." : "Bewerbung absenden"}
                   </button>
@@ -575,10 +569,10 @@ export default function Home() {
       </section>
 
       {/* ── FAQ ── */}
-      <section id="faq" className="py-20 sm:py-28">
+      <section id="faq" className="py-20 sm:py-28 bg-warm">
         <div className="max-w-[700px] mx-auto px-5 sm:px-10">
           <FadeIn className="text-center mb-12">
-            <p className="inline-block bg-surface border border-border text-foreground text-xs font-semibold tracking-[0.15em] uppercase px-4 py-2 rounded-full mb-6">Häufige Fragen</p>
+            <p className="inline-block bg-white border border-border text-foreground text-xs font-semibold tracking-[0.15em] uppercase px-4 py-2 rounded-full mb-6">Häufige Fragen</p>
             <h2 className="font-display text-4xl sm:text-5xl text-foreground leading-tight">
               Gut zu wissen
             </h2>
@@ -631,7 +625,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10">
           <div className="grid sm:grid-cols-3 gap-10 mb-10">
             <div>
-              <p className="font-semibold text-lg mb-2">Confiserie Bachmann</p>
+              <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={110} height={55} className="h-10 w-auto mb-4 brightness-0 invert" />
               <p className="text-white/50 text-sm leading-relaxed">
                 Seit 1897 in Luzern — Confiserie, Bäckerei und mehr.
                 Mit über 30 Filialen und einem familiären Team.
@@ -655,7 +649,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
-            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.0.0</span></p>
+            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.1.0</span></p>
             <div className="flex gap-6">
               <a href="/impressum" className="hover:text-white/60 transition-colors">Impressum</a>
               <a href="/datenschutz" className="hover:text-white/60 transition-colors">Datenschutz</a>

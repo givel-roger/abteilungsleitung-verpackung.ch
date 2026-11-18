@@ -1,11 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Datenschutz() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <nav className="border-b border-border">
+    <div className="min-h-screen bg-warm text-foreground">
+      <nav className="border-b border-border bg-white">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
-          <Link href="/" className="font-semibold text-lg">Confiserie Bachmann</Link>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo-bachmann.svg" alt="Confiserie Bachmann" width={110} height={55} className="h-10 w-auto" />
+          </Link>
           <Link href="/" className="text-sm text-muted hover:text-foreground transition-colors">
             Zurück zur Stelle
           </Link>
@@ -92,12 +95,12 @@ export default function Datenschutz() {
         </div>
       </main>
 
-      <footer className="border-t border-border py-10">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted/50">
+      <footer className="bg-primary text-white py-10">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
           <p>© {new Date().getFullYear()} Confiserie Bachmann AG</p>
           <div className="flex gap-6">
-            <Link href="/impressum" className="hover:text-foreground transition-colors">Impressum</Link>
-            <Link href="/datenschutz" className="text-foreground">Datenschutz</Link>
+            <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
+            <Link href="/datenschutz" className="text-white">Datenschutz</Link>
           </div>
         </div>
       </footer>
