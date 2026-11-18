@@ -8,41 +8,26 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Sushi Catering Schweiz — Frisch gerollt, direkt zu Ihnen",
-    template: "%s | Sushi Catering Schweiz",
-  },
+  title: "Stv. Abteilungsleitung Verpackung (100%) – Confiserie Bachmann, Luzern",
   description:
-    "Premium Sushi Catering für Events, Firmenanlässe und private Feiern in der ganzen Schweiz. Mit oder ohne Koch. Frisch zubereitet von Kaiten Sushi.",
+    "Bewirb dich jetzt als Stv. Abteilungsleitung Verpackung bei der Confiserie Bachmann in Luzern. In 60 Sekunden bewerben – kein Lebenslauf nötig.",
   keywords: [
-    "sushi catering",
-    "sushi catering schweiz",
-    "sushi event",
-    "sushi party",
-    "sushi koch mieten",
-    "sushi platte bestellen",
-    "catering luzern",
-    "sushi workshop",
-    "firmen catering schweiz",
+    "stellvertretende abteilungsleitung verpackung",
+    "confiserie bachmann",
+    "job luzern",
+    "verpackung lebensmittel",
+    "führungsposition produktion",
+    "bachmann karriere",
   ],
-  authors: [{ name: "Kaiten by Yorokobi" }],
-  metadataBase: new URL("https://www.sushi-catering.ch"),
+  metadataBase: new URL("https://www.abteilungsleitung-verpackung.ch"),
   openGraph: {
     type: "website",
     locale: "de_CH",
-    url: "https://www.sushi-catering.ch",
-    siteName: "Sushi Catering Schweiz",
-    title: "Sushi Catering Schweiz — Frisch gerollt, direkt zu Ihnen",
+    url: "https://www.abteilungsleitung-verpackung.ch",
+    siteName: "Confiserie Bachmann Karriere",
+    title: "Stv. Abteilungsleitung Verpackung (100%) – Confiserie Bachmann",
     description:
-      "Premium Sushi Catering für Events, Firmenanlässe und private Feiern. Live-Koch, Sushi Platten oder Workshop. Ab 8 Personen.",
-    images: [
-      {
-        url: "/images/hero-sushi.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Sushi Catering Platte von Kaiten",
-      },
-    ],
+      "Werde Teil der Confiserie Bachmann in Luzern. Bewirb dich jetzt als Stv. Abteilungsleitung Verpackung – in 60 Sekunden, ohne Lebenslauf.",
   },
   robots: {
     index: true,
@@ -63,24 +48,28 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "FoodService",
-              name: "Sushi Catering Schweiz by Kaiten",
+              "@type": "JobPosting",
+              title: "Stv. Abteilungsleitung Verpackung (100%)",
               description:
-                "Premium Sushi Catering für Events, Firmenanlässe und private Feiern in der ganzen Schweiz.",
-              url: "https://www.sushi-catering.ch",
-              telephone: "+41412449999",
-              email: "info@yorokobi.ch",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Luzern",
-                addressCountry: "CH",
+                "Stellvertretende Abteilungsleitung Verpackung bei der Confiserie Bachmann in Luzern. Führung, Organisation und Qualitätssicherung in der Verpackung von Confiserie- und Backwaren.",
+              hiringOrganization: {
+                "@type": "Organization",
+                name: "Confiserie Bachmann",
+                sameAs: "https://www.bachmann-karriere.ch",
+                logo: "https://www.abteilungsleitung-verpackung.ch/images/logo-bachmann.png",
               },
-              areaServed: {
-                "@type": "Country",
-                name: "Schweiz",
+              jobLocation: {
+                "@type": "Place",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Werkhofstrasse 20",
+                  addressLocality: "Luzern",
+                  postalCode: "6005",
+                  addressCountry: "CH",
+                },
               },
-              priceRange: "ab CHF 12 pro Person",
-              sameAs: ["https://www.kaiten.ch"],
+              employmentType: "FULL_TIME",
+              workHours: "Mo–Fr, ab 06:30 Uhr",
             }),
           }}
         />

@@ -3,12 +3,15 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #111111;
-  --color-accent: #c41e2a;
-  --color-accent-hover: #a8171f;
+  --color-primary: #0f1d3a;
+  --color-primary-light: #1a2d54;
+  --color-accent: #e8a833;
+  --color-accent-hover: #d49520;
   --color-warm: #faf7f4;
   --color-muted: #666;
-  --color-surface: #f7f5f2;
-  --color-border: #e8e5e0;
+  --color-surface: #f3f5f8;
+  --color-border: #e0e4ea;
+  --color-card: #162244;
   --font-sans: var(--font-geist-sans);
 }
 
@@ -37,9 +40,4 @@ body {
 
 .font-display {
   font-family: 'Playfair Display', Georgia, serif;
-}
-
-.text-outline {
-  -webkit-text-stroke: 1.5px #1a1a1a;
-  color: transparent;
 }

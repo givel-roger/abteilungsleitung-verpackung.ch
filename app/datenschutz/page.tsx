@@ -1,16 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <nav className="border-b border-border">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-10 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/images/logo-black.png" alt="Kaiten by Yorokobi" width={200} height={44} className="h-8 w-auto" />
-          </Link>
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
+          <Link href="/" className="font-semibold text-lg">Confiserie Bachmann</Link>
           <Link href="/" className="text-sm text-muted hover:text-foreground transition-colors">
-            Zurück zur Startseite
+            Zurück zur Stelle
           </Link>
         </div>
       </nav>
@@ -22,27 +19,27 @@ export default function Datenschutz() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">Verantwortliche Stelle</h2>
             <p>
-              Yorokobi AG<br />
-              Habsburgerstrasse 48<br />
-              6003 Luzern<br />
-              E-Mail: <a href="mailto:info@yorokobi.ch" className="text-foreground underline">info@yorokobi.ch</a>
+              Confiserie Bachmann AG<br />
+              Werkhofstrasse 20<br />
+              6005 Luzern<br />
+              E-Mail: <a href="mailto:suzi.marques@confiserie.ch" className="text-foreground underline">suzi.marques@confiserie.ch</a>
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">Erhebung und Verwendung von Daten</h2>
             <p>
-              Wenn Sie unser Kontaktformular nutzen, erheben wir die von Ihnen angegebenen Daten
-              (Name, E-Mail-Adresse, Telefonnummer, Eventdatum, Anzahl Gäste, gewünschtes Paket
-              und Nachricht). Diese Daten verwenden wir ausschliesslich zur Bearbeitung Ihrer
-              Anfrage und zur Erstellung eines Angebots.
+              Wenn du das Bewerbungsformular auf dieser Website nutzt, erheben wir die von dir
+              angegebenen Daten (Vorname, Nachname, E-Mail-Adresse, Telefonnummer sowie deine Angaben
+              zu Erfahrung, Ausbildung, Führungskompetenz und Sprachkenntnissen). Diese Daten
+              verwenden wir ausschliesslich zur Bearbeitung deiner Bewerbung.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">Rechtsgrundlage</h2>
             <p>
-              Die Verarbeitung Ihrer Daten erfolgt auf Grundlage Ihrer Einwilligung
+              Die Verarbeitung deiner Daten erfolgt auf Grundlage deiner Einwilligung
               (Art. 6 Abs. 1 lit. a DSGVO) sowie zur Durchführung vorvertraglicher Massnahmen
               (Art. 6 Abs. 1 lit. b DSGVO). In der Schweiz gilt zusätzlich das
               Bundesgesetz über den Datenschutz (DSG).
@@ -52,26 +49,27 @@ export default function Datenschutz() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">Speicherdauer</h2>
             <p>
-              Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer
-              Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+              Deine Bewerbungsdaten werden nur so lange gespeichert, wie es für die Bearbeitung
+              deiner Bewerbung erforderlich ist. In der Regel werden Daten abgelehnter
+              Bewerbungen nach 6 Monaten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">Weitergabe an Dritte</h2>
             <p>
-              Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur
-              Vertragserfüllung erforderlich oder Sie haben ausdrücklich eingewilligt.
+              Deine Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur
+              Durchführung des Bewerbungsprozesses erforderlich.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">Ihre Rechte</h2>
+            <h2 className="text-lg font-semibold text-foreground mb-3">Deine Rechte</h2>
             <p>
-              Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und
-              Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Kontaktieren
-              Sie uns dazu unter{" "}
-              <a href="mailto:info@sushi-catering.ch" className="text-foreground underline">info@sushi-catering.ch</a>.
+              Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung und
+              Einschränkung der Verarbeitung deiner personenbezogenen Daten. Kontaktiere
+              uns dazu unter{" "}
+              <a href="mailto:suzi.marques@confiserie.ch" className="text-foreground underline">suzi.marques@confiserie.ch</a>.
             </p>
           </section>
 
@@ -87,7 +85,7 @@ export default function Datenschutz() {
             <h2 className="text-lg font-semibold text-foreground mb-3">SSL-Verschlüsselung</h2>
             <p>
               Diese Website nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung.
-              Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile
+              Eine verschlüsselte Verbindung erkennst du daran, dass die Adresszeile
               des Browsers von «http://» auf «https://» wechselt.
             </p>
           </section>
@@ -95,8 +93,8 @@ export default function Datenschutz() {
       </main>
 
       <footer className="border-t border-border py-10">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted/50">
-          <p>© {new Date().getFullYear()} Yorokobi AG</p>
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted/50">
+          <p>© {new Date().getFullYear()} Confiserie Bachmann AG</p>
           <div className="flex gap-6">
             <Link href="/impressum" className="hover:text-foreground transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="text-foreground">Datenschutz</Link>
