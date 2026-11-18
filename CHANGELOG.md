@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.1.1
+- Telefonnummer +41 79 419 00 70 im Footer ergänzt
+
+## v1.1.0
+- Design auf Confiserie Bachmann CI umgestellt (Logo, Braun/Pink Farben, Playfair Display)
+- Logo von confiserie.ch heruntergeladen und eingebunden
+- Alle Seiten (Hauptseite, Impressum, Datenschutz) im neuen Design
+
+## v1.0.0
+- Stellentrichter für Stv. Abteilungsleitung Verpackung (100%) bei Confiserie Bachmann
+- 4-Schritt-Bewerbungsformular mit Scoring-Algorithmus
+- Admin-Cockpit für HR
+- SSL, Autodeploy auf Server 8
+
 ## v1.4.2
 - Überall "Yorokobi AG" korrekt geschrieben (Impressum, Datenschutz, Footer)
 - Datenschutz-Seite: Adresse und E-Mail aktualisiert
