@@ -7,7 +7,7 @@ export default function Impressum() {
       <nav className="border-b border-border bg-white">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image src="/logo-bachmann-pink.png" alt="Confiserie Bachmann" width={280} height={158} className="h-12 w-auto" />
+            <Image src="/logo-bachmann-pink-opt.png" alt="Confiserie Bachmann" width={280} height={158} className="h-12 w-auto" unoptimized />
           </Link>
           <Link href="/" className="text-sm text-muted hover:text-foreground transition-colors">
             Zurück zur Stelle

@@ -152,7 +152,7 @@ export default function Home() {
       <nav className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-4">
-            <Image src="/logo-bachmann-pink.png" alt="Confiserie Bachmann" width={280} height={158} className="h-14 w-auto" priority />
+            <Image src="/logo-bachmann-pink-opt.png" alt="Confiserie Bachmann" width={280} height={158} className="h-14 w-auto" priority unoptimized />
           </a>
           <a href="#bewerbung" onClick={(e) => { e.preventDefault(); scrollToForm(); }} className="bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-colors">
             Jetzt bewerben
@@ -625,7 +625,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5 sm:px-10">
           <div className="grid sm:grid-cols-3 gap-10 mb-10">
             <div>
-              <Image src="/logo-bachmann-pink.png" alt="Confiserie Bachmann" width={280} height={158} className="h-14 w-auto mb-4" />
+              <Image src="/logo-bachmann-pink-opt.png" alt="Confiserie Bachmann" width={280} height={158} className="h-14 w-auto mb-4" unoptimized />
               <p className="text-white/50 text-sm leading-relaxed">
                 Seit 1897 in Luzern — Confiserie, Bäckerei und mehr.
                 Mit über 30 Filialen und einem familiären Team.
@@ -652,7 +652,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
-            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.3.0</span></p>
+            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.3.1</span></p>
             <div className="flex gap-6">
               <a href="/impressum" className="hover:text-white/60 transition-colors">Impressum</a>
               <a href="/datenschutz" className="hover:text-white/60 transition-colors">Datenschutz</a>

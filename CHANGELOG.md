@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.1
+- Logos scharf: optimierte PNGs (600px, unoptimized) statt Next.js-Komprimierung
+- 6x kleinere Dateien (59KB statt 395KB) bei voller Retina-Schärfe
+
 ## v1.3.0
 - Offizielles Bachmann-Logo (PNG mit Schwung) statt Website-SVG
 - Pink-Logo in Nav, Footer und Unterseiten (Impressum, Datenschutz)
