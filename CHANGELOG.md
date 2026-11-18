@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.0
+- Offizielles Bachmann-Logo (PNG mit Schwung) statt Website-SVG
+- Pink-Logo in Nav, Footer und Unterseiten (Impressum, Datenschutz)
+
 ## v1.2.1
 - Logo in Nav und Footer grösser (h-14 statt h-10)
 - Nav höher (h-20) mit "Confiserie Bachmann · LUZERN · SEIT 1897" neben Logo
