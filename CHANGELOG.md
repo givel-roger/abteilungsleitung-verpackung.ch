@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.0
+- Kontakt auf Leadhunter (Irma Eckermann) umgestellt statt Confiserie Bachmann direkt
+- Footer: Name, E-Mail, Telefon, Adresse von Leadhunter
+- Impressum & Datenschutz: alle Kontaktangaben auf info@leadhunter.ch geändert
+
 ## v1.1.1
 - Telefonnummer +41 79 419 00 70 im Footer ergänzt
 

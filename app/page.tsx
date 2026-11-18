@@ -634,10 +634,12 @@ export default function Home() {
             <div>
               <p className="font-semibold mb-3">Kontakt</p>
               <div className="text-white/60 text-sm space-y-1">
-                <p>suzi.marques@confiserie.ch</p>
+                <p className="text-white/80 font-medium">Irma Eckermann</p>
+                <p>Leadhunter</p>
+                <p>info@leadhunter.ch</p>
                 <p>+41 79 419 00 70</p>
-                <p>Werkhofstrasse 20</p>
-                <p>CH-6005 Luzern</p>
+                <p>Cheerstrasse 13b</p>
+                <p>CH-6014 Luzern</p>
               </div>
             </div>
             <div>
@@ -650,7 +652,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
-            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.1.1</span></p>
+            <p>© {new Date().getFullYear()} Confiserie Bachmann · <span className="text-white/20">v1.2.0</span></p>
             <div className="flex gap-6">
               <a href="/impressum" className="hover:text-white/60 transition-colors">Impressum</a>
               <a href="/datenschutz" className="hover:text-white/60 transition-colors">Datenschutz</a>

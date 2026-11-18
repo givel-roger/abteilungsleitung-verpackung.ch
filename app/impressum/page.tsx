@@ -32,10 +32,11 @@ export default function Impressum() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">Kontakt HR</h2>
+            <h2 className="text-lg font-semibold text-foreground mb-3">Kontakt</h2>
             <p>
-              Suzi Marques, HR-Generalistin<br />
-              E-Mail: <a href="mailto:suzi.marques@confiserie.ch" className="text-foreground underline">suzi.marques@confiserie.ch</a>
+              Irma Eckermann, Leadhunter<br />
+              E-Mail: <a href="mailto:info@leadhunter.ch" className="text-foreground underline">info@leadhunter.ch</a><br />
+              Tel: <a href="tel:+41794190070" className="text-foreground underline">+41 79 419 00 70</a>
             </p>
           </section>
 

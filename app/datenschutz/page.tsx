@@ -25,7 +25,8 @@ export default function Datenschutz() {
               Confiserie Bachmann AG<br />
               Werkhofstrasse 20<br />
               6005 Luzern<br />
-              E-Mail: <a href="mailto:suzi.marques@confiserie.ch" className="text-foreground underline">suzi.marques@confiserie.ch</a>
+              Kontakt: Irma Eckermann, Leadhunter<br />
+              E-Mail: <a href="mailto:info@leadhunter.ch" className="text-foreground underline">info@leadhunter.ch</a>
             </p>
           </section>
 
@@ -72,7 +73,7 @@ export default function Datenschutz() {
               Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung und
               Einschränkung der Verarbeitung deiner personenbezogenen Daten. Kontaktiere
               uns dazu unter{" "}
-              <a href="mailto:suzi.marques@confiserie.ch" className="text-foreground underline">suzi.marques@confiserie.ch</a>.
+              <a href="mailto:info@leadhunter.ch" className="text-foreground underline">info@leadhunter.ch</a>.
             </p>
           </section>
 
