@@ -34,6 +34,41 @@ async function writeAll(data: Bewerbung[]) {
   await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
+
+// Meta Conversions API
+async function capiLeadSenden(req: Request, eventId: string) {
+  const pixelId = "947894408307993";
+  const token = process.env.META_CAPI_TOKEN;
+  if (!token) return;
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "";
+  const ua = req.headers.get("user-agent") || "";
+  const cookies = req.headers.get("cookie") || "";
+  const fbp = (cookies.match(/(?:^|;\s*)_fbp=([^;]+)/) || [])[1] || "";
+  const fbc = (cookies.match(/(?:^|;\s*)_fbc=([^;]+)/) || [])[1] || "";
+  try {
+    await fetch(`https://graph.facebook.com/v23.0/${pixelId}/events?access_token=${encodeURIComponent(token)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        data: [{
+          event_name: "Lead",
+          event_time: Math.floor(Date.now() / 1000),
+          event_id: eventId,
+          action_source: "website",
+          event_source_url: "https://www.abteilungsleitung-verpackung.ch/",
+          user_data: {
+            ...(ip ? { client_ip_address: ip } : {}),
+            ...(ua ? { client_user_agent: ua } : {}),
+            ...(fbp ? { fbp } : {}),
+            ...(fbc ? { fbc } : {}),
+          },
+        }],
+      }),
+      signal: AbortSignal.timeout(10000),
+    });
+  } catch { /* best-effort */ }
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -62,7 +97,10 @@ export async function POST(req: Request) {
     all.push(bewerbung);
     await writeAll(all);
 
-    return NextResponse.json({ success: true, id: bewerbung.id });
+    const eventId = crypto.randomUUID();
+    capiLeadSenden(req, eventId).catch(() => {});
+
+    return NextResponse.json({ success: true, id: bewerbung.id, eventId });
   } catch {
     return NextResponse.json({ error: "Server-Fehler" }, { status: 500 });
   }

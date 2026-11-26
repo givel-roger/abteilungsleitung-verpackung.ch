@@ -128,6 +128,9 @@ export default function Home() {
         body: JSON.stringify({ ...form, score }),
       });
       if (!res.ok) throw new Error("Fehler beim Senden");
+      const j = await res.json().catch(() => ({}));
+      const fbq = (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq;
+      if (fbq) fbq("track", "Lead", { content_name: "bewerbung" }, j.eventId ? { eventID: j.eventId } : undefined);
       setSent(true);
     } catch {
       setError("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
